@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="thumbnail">
+            <img src="https://i.ytimg.com/vi/YJg99djypl8/maxresdefault.jpg" alt="mios">
+        </div>
+        <div class="thumbnail">
+            <img src="https://avatars.mds.yandex.net/i?id=e075e261bd8abdc63c5be32c69b6694f1758dbc0-5490022-images-thumbs&ref=rim&n=33&w=320&h=180" alt="mios1">
+        </div>
+        <div class="thumbnail">
+            <img src="https://sun9-77.userapi.com/A7QiW1PaY1t9vuYH-VBU0GJFYmHcTNVgHIAoGg/6UGMt2r5nkQ.jpg" alt="Image 3">
+        </div>
+        <div class="thumbnail">
+            <img src="https://i.ytimg.com/vi/ORmye7aRwPA/maxresdefault.jpg" alt="naturalnogay">
+        </div>
+
+    </div>
+    <button id="change-background">Сменить фон</button>
+    <div class="lightbox">
+        <img src="" alt="Large Image">
+        <span class="close">&times;</span>
+    </div>
+    <div class="tag-filter">
+        <label for="tags">Выберите теги:</label>
+        <select id="tags" multiple>
+            <option value="mios">Танцую</option>
+            <option value="mios1">Пою</option>
+            <option value="naturalnogay">Сижу</option>
+        </select>
+        <button id="apply-filter">Применить фильтр</button>
+    </div>
+    <label for="slideshow-speed">Скорость слайд-шоу:</label>
+    <input type="range" id="slideshow-speed" min="1" max="10000" value="3000">
+    <span id="speed-value">3000 мс</span>
+    <button class="fullscreen">Полноэкранный режим</button>
+    <button class="slideshow">Слайд-шоу</button>
+    <label for="sort">Сортировка:</label>
+
+    <select id="sort">
+        <option value="default">По умолчанию</option>
+        <option value="name">По имени</option>
+    </select>
+
+<form id="upload-form">
+    <label for="image-upload">Загрузить изображение:</label>
+    <input type="file" id="image-upload" accept="image/*">
+    <button type="submit">Загрузить</button>
+</form>
+
+<div class="external-image">
+    <label for="external-image-url">Внешний URL изображения:</label>
+    <input type="url" id="external-image-url" placeholder="Введите URL изображения">
+    <button id="add-external-image">Добавить</button>
+</div>
+
+    <div class="fullscreen-image-container"></div>
+    
+    <button id="delete-all-images">Удалить все изображения</button>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sort.js"></script>
+    <script src="js/big.js"></script>
+</body>
+</html>
